@@ -27,7 +27,8 @@ const presets={
 
 // Only the catalogue published with this site establishes global verification.
 const gearingKey=x=>x.brand.trim().toLowerCase()+'|'+x.model.trim().toLowerCase();
-const validVerified=x=>x&&typeof x.brand==='string'&&x.brand.trim()&&x.brand.length<=70&&typeof x.model==='string'&&x.model.trim()&&x.model.length<=90&&Number.isInteger(x.main)&&x.main>=30&&x.main<=400&&Number.isInteger(x.standard)&&x.standard>=8&&x.standard<=40&&typeof x.source==='string'&&x.source.trim()&&x.source.length<=1000&&(!x.url||(typeof x.url==='string'&&/^https?:\/\//i.test(x.url)));
+const validDrive=x=>(x.directDrive===undefined||typeof x.directDrive==='boolean')&&(x.directDrive===true?x.main===1&&x.standard===1:Number.isInteger(x.main)&&x.main>=30&&x.main<=400&&Number.isInteger(x.standard)&&x.standard>=8&&x.standard<=40);
+const validVerified=x=>x&&typeof x.brand==='string'&&x.brand.trim()&&x.brand.length<=70&&typeof x.model==='string'&&x.model.trim()&&x.model.length<=90&&validDrive(x)&&typeof x.source==='string'&&x.source.trim()&&x.source.length<=1000&&(!x.url||(typeof x.url==='string'&&/^https?:\/\//i.test(x.url)));
 const catalogReady=(async()=>{
  try{
   const response=await fetch('./verified-gearing.json',{cache:'no-cache'});
