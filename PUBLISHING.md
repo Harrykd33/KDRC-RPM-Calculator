@@ -5,7 +5,7 @@ The RPM calculator lists only verified models. Manage Models lists only unverifi
 ## Publish a verified model
 
 1. Open Manage Models and choose **Set gearing** for the model.
-2. Enter the installed main/equivalent teeth and pinion teeth. Check the values against the appropriate manual and drivetrain revision.
+2. Enter the installed main/equivalent teeth and pinion teeth, or select **Direct drive (1:1)** for a motor connected directly to the main rotor. Direct drive disables the tooth fields and saves a fixed 1:1 ratio. Check the values against the appropriate manual and drivetrain revision.
 3. Put the verification source in **Notes / source**. Optionally enter a source URL in the owner section.
 4. Select **Prepare catalogue update**. This downloads a proposed `verified-gearing.json` containing the current published catalogue plus your change.
 5. Review the downloaded file. In your GitHub repository, replace `verified-gearing.json` on the branch configured as the GitHub Pages publishing source and commit the change. Publish only after you have checked the source.
