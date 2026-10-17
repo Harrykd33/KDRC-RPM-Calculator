@@ -29,6 +29,10 @@ The service worker refreshes the shared JSON from the network and caches it for 
 
 If multiple updates are being prepared, reload before each update and compare the downloaded file against the current repository before committing. GitHub commit review is the final publishing step.
 
+## Mobile layout
+
+The calculator adapts spacing and text to screen width and usable viewport height, includes safe-area padding for phone notches, and uses a tighter layout on short screens. Form inputs retain 16px text to avoid focus zoom on phones. Small screens, landscape orientation, enlarged system text, or long source notes may still require scrolling so content remains accessible.
+
 ## Tests
 
 With Node.js installed, run:
