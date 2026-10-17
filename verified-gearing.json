@@ -1,0 +1,100 @@
+{
+  "format": "KevinD-RC-verified-v1",
+  "models": [
+    {
+      "brand": "SAB Goblin",
+      "model": "RAW 700",
+      "main": 212,
+      "pinions": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "standard": 21,
+      "source": "Manual-derived effective 212T two-stage equivalent. Confirm revision and installed pulley.",
+      "url": "https://www.manualslib.com/manual/2054613/Sab-Heli-Division-Goblin-Raw-700.html"
+    },
+    {
+      "brand": "SAB Goblin",
+      "model": "RAW 700 Piuma",
+      "main": 216,
+      "pinions": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "standard": 20,
+      "source": "Manual-derived effective 216T two-stage equivalent. Confirm revision and installed pulley.",
+      "url": "https://device.report/m/e96085d1f5993b2585ca44cf3320ce8c0b2188635fc6f078865a2f42a533bab5"
+    },
+    {
+      "brand": "Goosky",
+      "model": "RS6",
+      "main": 107,
+      "pinions": [
+        12,
+        13
+      ],
+      "standard": 12,
+      "source": "RS6 specifications: 107T main gear, documented 12T (8.917:1) and 13T (8.231:1). Factory-installed pinion not independently established.",
+      "url": "https://manuals.plus/asin/B0FCDKQJ61"
+    },
+    {
+      "brand": "Goosky",
+      "model": "RS7",
+      "main": 107,
+      "pinions": [
+        11,
+        12
+      ],
+      "standard": 11,
+      "source": "RS7 instruction manual: 107T main gear; 11T standard (9.727:1), 12T alternative (8.917:1).",
+      "url": "https://manuals.plus/m/e8940e8956e3cf705c4d8f256040e3bd0d9961bb5af9cfa04541a928775e5411"
+    },
+    {
+      "brand": "Goosky",
+      "model": "RS7 Ultra",
+      "main": 116,
+      "pinions": [
+        12,
+        13
+      ],
+      "standard": 13,
+      "source": "RS7 Ultra instruction manual: 116T main gear; 13T standard (~8.923:1), 12T alternative (~9.667:1).",
+      "url": "https://manuals.plus/m/0783ef8f52ed93f3bd07b310b2460cda922f27d4ee65cce88384a753315ca8d3"
+    },
+    {
+      "brand": "Tron",
+      "model": "Tron 7.0",
+      "main": 155,
+      "pinions": [
+        16
+      ],
+      "standard": 16,
+      "source": "Manufacturer product specification: 155T main gear and 16T pinion included (9.6875:1). Other pinions not verified here.",
+      "url": "https://tronhelicopters.com/produkt/tron-7-0/"
+    },
+    {
+      "brand": "Tron",
+      "model": "Tron 7.0 Advance",
+      "main": 151,
+      "pinions": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "standard": 16,
+      "source": "Manufacturer drivetrain catalog: 151T herringbone main gear and 15–18T herringbone pinions; kit page lists 16T included. Confirm drivetrain revision.",
+      "url": "https://tronhelicopters.com/produkt-kategorie/tron-7-0-advance-drivertain-parts/"
+    }
+  ]
+}
