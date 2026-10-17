@@ -2,6 +2,39 @@
   "format": "KevinD-RC-verified-v1",
   "models": [
     {
+      "brand": "Goosky",
+      "model": "RS6",
+      "main": 107,
+      "pinions": [
+        12,
+        13
+      ],
+      "standard": 12,
+      "source": "RS6 specifications: 107T main gear, documented 12T (8.917:1) and 13T (8.231:1). Factory-installed pinion not independently established.",
+      "url": "https://manuals.plus/asin/B0FCDKQJ61"
+    },
+    {
+      "brand": "Goosky",
+      "model": "RS7",
+      "main": 107,
+      "pinions": [
+        11,
+        12
+      ],
+      "standard": 11,
+      "source": "RS7 instruction manual: 107T main gear; 11T standard (9.727:1), 12T alternative (8.917:1).",
+      "url": "https://manuals.plus/m/e8940e8956e3cf705c4d8f256040e3bd0d9961bb5af9cfa04541a928775e5411"
+    },
+    {
+      "brand": "Goosky",
+      "model": "RS7 Ultra",
+      "directDrive": false,
+      "main": 116,
+      "standard": 13,
+      "source": "https://www.gooskyrc.com/DownLoad/167788.html",
+      "url": ""
+    },
+    {
       "brand": "SAB Goblin",
       "model": "RAW 700",
       "main": 212,
@@ -34,42 +67,6 @@
       "standard": 20,
       "source": "Manual-derived effective 216T two-stage equivalent. Confirm revision and installed pulley.",
       "url": "https://device.report/m/e96085d1f5993b2585ca44cf3320ce8c0b2188635fc6f078865a2f42a533bab5"
-    },
-    {
-      "brand": "Goosky",
-      "model": "RS6",
-      "main": 107,
-      "pinions": [
-        12,
-        13
-      ],
-      "standard": 12,
-      "source": "RS6 specifications: 107T main gear, documented 12T (8.917:1) and 13T (8.231:1). Factory-installed pinion not independently established.",
-      "url": "https://manuals.plus/asin/B0FCDKQJ61"
-    },
-    {
-      "brand": "Goosky",
-      "model": "RS7",
-      "main": 107,
-      "pinions": [
-        11,
-        12
-      ],
-      "standard": 11,
-      "source": "RS7 instruction manual: 107T main gear; 11T standard (9.727:1), 12T alternative (8.917:1).",
-      "url": "https://manuals.plus/m/e8940e8956e3cf705c4d8f256040e3bd0d9961bb5af9cfa04541a928775e5411"
-    },
-    {
-      "brand": "Goosky",
-      "model": "RS7 Ultra",
-      "main": 116,
-      "pinions": [
-        12,
-        13
-      ],
-      "standard": 13,
-      "source": "RS7 Ultra instruction manual: 116T main gear; 13T standard (~8.923:1), 12T alternative (~9.667:1).",
-      "url": "https://manuals.plus/m/0783ef8f52ed93f3bd07b310b2460cda922f27d4ee65cce88384a753315ca8d3"
     },
     {
       "brand": "Tron",
