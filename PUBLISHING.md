@@ -2,6 +2,12 @@
 
 The RPM calculator lists only verified models. Manage Models lists only unverified models, including personal saved gearing, and can be filtered by brand. Once verified gearing is published and the app reloads, the model disappears from Manage Models and appears in the calculator. Personal gearing and backups remain local to each browser; saving or importing them does not make a model available in the calculator.
 
+Manage Models requires PIN **2904** each time the page opens or reloads. Use **Lock Manage Models** to lock it again. This client-side PIN is a convenience gate; GitHub repository permissions still control publishing.
+
+A **✓** beside a model means its gearing has been saved on this device. The check mark remains after reloading and disappears if the saved gearing is deleted. It does not mean the model is verified.
+
+On the RPM calculator, select **Custom gearing** to disable brand/model selection and enter your own gear values (use 1 and 1 for direct drive). Clear the checkbox to restore the selected verified model. Custom values are not saved or verified.
+
 ## Publish a verified model
 
 1. Open Manage Models and choose **Set gearing** for the model.
