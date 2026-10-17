@@ -7,12 +7,14 @@ function startCalculatorTutorial(){
  ['customGearing','Use your own gearing','Check Custom gearing to enter your own teeth or choose a saved offline model. Brand and model selection will be greyed out.'],
  ['gearingPanel','Check the drivetrain','Main / equivalent teeth divided by pinion teeth gives the drive ratio. For custom direct drive, enter 1 and 1. Source details appear below.'],
  ['kvNum','Set your motor KV','Enter the motor KV or move its slider. The starting value is 830 KV.'],
- ['cellsRange','Match your battery','Choose the battery cell count. The starting value is 8S.'],
- ['voltsRange','Adjust volts per cell','Set the voltage per cell used in the estimate. Battery voltage changes during a flight.'],
- ['effRange','Allow for efficiency','Adjust the estimated drivetrain and motor efficiency to suit your setup.'],
- ['throttleRange','Explore throttle output','Move this slider to estimate head speed at different outputs. Above 80%, the RPM number shifts from orange toward red.'],
+ ['cellsRange','Match your battery','Choose 2S through 16S to match your pack. S is the number of cells in series; pack voltage is cell count multiplied by volts per cell. The starting value is 8S.'],
+ ['voltsRange','Nominal versus full-charge voltage','A standard LiPo is rated at 3.7 V per cell nominal and reaches 4.2 V fully charged. Nominal is a reference for comparison; using only full-charge voltage can overstate the RPM available later in a flight.'],
+ ['voltsRange','Choose a realistic flight voltage','For a better estimate, use measured voltage under load because voltage falls during discharge and sags under heavy load. This app starts at 3.85 V per cell as an adjustable example, not the nominal rating. Choose 3.7 V for a nominal standard-LiPo estimate.'],
+ ['effRange','Allow for efficiency','This separate factor estimates drivetrain and motor losses. The 90% default is an assumption, not a measured efficiency. Throttle percentage and system efficiency are different values.'],
+ ['throttleRange','Why start around 80%?','A target around 80% can leave governor headroom to add output when rotor load increases or battery voltage falls. Around 70–90% can be a useful starting range when supported by your governor mode: too low can be inefficient, while too high leaves little compensation room.'],
+ ['throttleRange','Governor settings depend on your setup','80% is not a universal peak-efficiency setting or a guaranteed 20% power reserve. Follow your ESC governor instructions and check actual RPM and temperatures. This calculator uses a simple linear estimate, not a governor simulation. Orange-to-red above 80% is a visual guide, not a danger limit.'],
  ['manageModelsLink','Save personal models','Manage Models lets you save and back up offline custom gearing on this device. Database verification and publishing tools are behind the PIN.'],
- ['reset','Reset your setup','Reset restores the starting motor and battery settings and the selected gearing.'],
+ ['reset','Reset battery and output','Reset restores battery cells, volts per cell, efficiency and throttle. Your motor KV, model selection and gearing stay as you set them.'],
  ['tutorialButton','Return any time','Use this Tutorial button whenever you want another tour.']
  ];
  let index=0,frame=0,previousFocus=null;
