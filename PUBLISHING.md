@@ -23,7 +23,7 @@ Verified gearing takes priority over personal saved values for the same brand/mo
 
 ## Initial deployment
 
-Publish these application files together: `index.html`, `gearing.html`, `model-catalog.js`, `verified-gearing.json`, `sw.js`, `manifest.webmanifest`, `icon-192.png`, and `icon-512.png`. Keep relative paths unchanged. The new catalogue initially contains the seven existing source-checked presets; this change does not independently re-verify their manufacturer specifications.
+Publish these application files together: `index.html`, `gearing.html`, `model-catalog.js`, `tutorial.js`, `verified-gearing.json`, `sw.js`, `manifest.webmanifest`, `icon-192.png`, and `icon-512.png`. Keep relative paths unchanged. The new catalogue initially contains the seven existing source-checked presets; this change does not independently re-verify their manufacturer specifications.
 
 The service worker refreshes the shared JSON from the network and caches it for offline use. The app validates catalogue entries before applying them and falls back to bundled source-checked presets if the catalogue is unavailable or invalid. Preparing a publication requires successfully loading the current catalogue, to reduce the risk of overwriting newer entries.
 
@@ -34,6 +34,10 @@ If multiple updates are being prepared, reload before each update and compare th
 In Manage Models, use **My offline custom models** above the PIN to enter gearing (or Direct drive) and save. Owner tools also retain the **Save as my offline custom model** option. These entries stay in that browser’s local storage and do not require a verification source. Select **Use custom gearing**, or enable Custom gearing in the calculator and choose an entry from **My offline custom models**. Regular brand/model selectors still list only verified models. Personal entries can use different gearing for an already verified model without changing the published preset.
 
 The **My offline custom models** section is available before the PIN. Users can add, edit, delete, export, import, and use their own offline models without unlocking. Verification and publishing remain behind the owner PIN. Offline models belong to a browser/device, not a signed-in account; shared browser profiles share saved entries. Export/import backups to transfer entries or protect them from cleared browser data. Load the app online once before offline use.
+
+## First-start tutorial
+
+The calculator starts a guided tutorial on the first visit in each browser. Arrows and highlights explain the main controls; Back, Next, Skip, Escape, and Finish control the tour. Dismissing or finishing remembers the choice locally. The **Tutorial** button below the calculator actions replays it at any time. The tour is cached for offline use and does not change calculator settings.
 
 ## Mobile layout
 
