@@ -35,6 +35,12 @@ In Manage Models, use **My offline custom models** above the PIN to enter gearin
 
 The **My offline custom models** section is available before the PIN. Users can add, edit, delete, export, import, and use their own offline models without unlocking. Verification and publishing remain behind the owner PIN. Offline models belong to a browser/device, not a signed-in account; shared browser profiles share saved entries. Export/import backups to transfer entries or protect them from cleared browser data. Load the app online once before offline use.
 
+## Battery range and estimation guidance
+
+Battery cells support **2S–16S**, with **8S** as the default. The tutorial explains standard-LiPo nominal voltage (3.7 V), full-charge voltage (4.2 V), and choosing representative voltage under load. The existing 3.85 V default is an adjustable estimate, not a nominal specification. See the [Horizon Hobby battery manual](https://www.horizonhobby.com/on/demandware.static/Sites-horizon-us-Site/Sites-horizon-master/default/Manuals/HRC44167_Manual.pdf).
+
+It also explains 80% as a governor-headroom starting point, rather than a universal efficiency optimum. The [Hobbywing Platinum 120A V5 manual](https://www.hobbywing.com/en/uploads/file/20240527/2273240252a029433b4ecff9a249c567.pdf) gives a 70–90% range for its Store Governor mode and explains compensation limits. Specific ESC modes and setups differ.
+
 ## First-start tutorial
 
 The calculator starts a guided tutorial on the first visit in each browser. Arrows and highlights explain the main controls; Back, Next, Skip, Escape, and Finish control the tour. Dismissing or finishing remembers the choice locally. The **Tutorial** button below the calculator actions replays it at any time. The tour is cached for offline use and does not change calculator settings.
