@@ -2,7 +2,7 @@
 
 The RPM calculator lists only verified models. Manage Models lists only unverified models, including personal saved gearing, and can be filtered by brand. Once verified gearing is published and the app reloads, the model disappears from Manage Models and appears in the calculator. Personal gearing and backups remain local to each browser; saving or importing them does not make a model available in the calculator.
 
-Manage Models requires PIN **2904** each time the page opens or reloads. Use **Lock Manage Models** to lock it again. This client-side PIN is a convenience gate; GitHub repository permissions still control publishing.
+Owner verification and publishing tools require PIN **2904** each time the page opens or reloads. Personal offline model tools are available without a PIN. Use **Lock Manage Models** to lock it again. This client-side PIN is a convenience gate; GitHub repository permissions still control publishing.
 
 A **✓** beside a model means its gearing has been saved on this device. The check mark remains after reloading and disappears if the saved gearing is deleted. It does not mean the model is verified.
 
@@ -28,6 +28,12 @@ Publish these application files together: `index.html`, `gearing.html`, `model-c
 The service worker refreshes the shared JSON from the network and caches it for offline use. The app validates catalogue entries before applying them and falls back to bundled source-checked presets if the catalogue is unavailable or invalid. Preparing a publication requires successfully loading the current catalogue, to reduce the risk of overwriting newer entries.
 
 If multiple updates are being prepared, reload before each update and compare the downloaded file against the current repository before committing. GitHub commit review is the final publishing step.
+
+## Personal offline custom gearing
+
+In Manage Models, use **My offline custom models** above the PIN to enter gearing (or Direct drive) and save. Owner tools also retain the **Save as my offline custom model** option. These entries stay in that browser’s local storage and do not require a verification source. Select **Use custom gearing**, or enable Custom gearing in the calculator and choose an entry from **My offline custom models**. Regular brand/model selectors still list only verified models. Personal entries can use different gearing for an already verified model without changing the published preset.
+
+The **My offline custom models** section is available before the PIN. Users can add, edit, delete, export, import, and use their own offline models without unlocking. Verification and publishing remain behind the owner PIN. Offline models belong to a browser/device, not a signed-in account; shared browser profiles share saved entries. Export/import backups to transfer entries or protect them from cleared browser data. Load the app online once before offline use.
 
 ## Mobile layout
 
