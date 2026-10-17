@@ -1,6 +1,6 @@
 # Shared model gearing on GitHub Pages
 
-Manage Models now defaults to **Show unverified models only**. Turn it off to view source-checked models too, or filter by brand. Personal unverified gearing and backups remain local to each browser.
+The RPM calculator lists only verified models. Manage Models lists only unverified models, including personal saved gearing, and can be filtered by brand. Once verified gearing is published and the app reloads, the model disappears from Manage Models and appears in the calculator. Personal gearing and backups remain local to each browser; saving or importing them does not make a model available in the calculator.
 
 ## Publish a verified model
 
