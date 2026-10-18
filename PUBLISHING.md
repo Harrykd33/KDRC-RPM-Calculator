@@ -6,7 +6,7 @@ Owner verification and publishing tools require PIN **2904** each time the page 
 
 A **✓** beside a model means its gearing has been saved on this device. The check mark remains after reloading and disappears if the saved gearing is deleted. It does not mean the model is verified.
 
-On the RPM calculator, select **Custom gearing** to disable brand/model selection and enter your own gear values (use 1 and 1 for direct drive). Clear the checkbox to restore the selected verified model. Custom values are not saved or verified.
+On the RPM calculator, select **Saved Models** to disable brand/model selection and enter your own gear values (use 1 and 1 for direct drive). Clear the checkbox to restore the selected verified model. Custom values are not saved or verified.
 
 ## Publish a verified model
 
@@ -23,7 +23,7 @@ Verified gearing takes priority over personal saved values for the same brand/mo
 
 ## Initial deployment
 
-Publish these application files together: `index.html`, `gearing.html`, `model-catalog.js`, `tutorial.js`, `verified-gearing.json`, `sw.js`, `manifest.webmanifest`, `icon-192.png`, and `icon-512.png`. Keep relative paths unchanged. The new catalogue initially contains the seven existing source-checked presets; this change does not independently re-verify their manufacturer specifications.
+Publish these application files together: `index.html`, `gearing.html`, `model-catalog.js`, `nitro.js`, `tutorial.js`, `verified-gearing.json`, `sw.js`, `manifest.webmanifest`, `icon-192.png`, and `icon-512.png`. Keep relative paths unchanged. The new catalogue initially contains the seven existing source-checked presets; this change does not independently re-verify their manufacturer specifications.
 
 The service worker refreshes the shared JSON from the network and caches it for offline use. The app validates catalogue entries before applying them and falls back to bundled source-checked presets if the catalogue is unavailable or invalid. Preparing a publication requires successfully loading the current catalogue, to reduce the risk of overwriting newer entries.
 
@@ -34,6 +34,20 @@ If multiple updates are being prepared, reload before each update and compare th
 In Manage Models, use **My offline custom models** above the PIN to enter gearing (or Direct drive) and save. Owner tools also retain the **Save as my offline custom model** option. These entries stay in that browser’s local storage and do not require a verification source. Select **Use custom gearing**, or enable Custom gearing in the calculator and choose an entry from **My offline custom models**. Regular brand/model selectors still list only verified models. Personal entries can use different gearing for an already verified model without changing the published preset.
 
 The **My offline custom models** section is available before the PIN. Users can add, edit, delete, export, import, and use their own offline models without unlocking. Verification and publishing remain behind the owner PIN. Offline models belong to a browser/device, not a signed-in account; shared browser profiles share saved entries. Export/import backups to transfer entries or protect them from cleared browser data. Load the app online once before offline use.
+
+## Electric and Nitro calculators
+
+The E / N check-style selectors sit on the right side of the head speed panel. E (Electric) is the default; N opens the Nitro calculator. Nitro estimates running engine RPM as maximum engine RPM multiplied by throttle, or accepts measured engine RPM directly. Head speed is running engine RPM divided by mechanical reduction. Real nitro throttle response, mixture, governor control and clutch slip are not simulated. Measured mode assumes the clutch is engaged; drivetrain power efficiency does not multiply a fixed mechanical speed ratio.
+
+Both Electric and Nitro have horizontal, exclusive 2 / 3 / 4 check-style options beside their gear diagrams. 2 is selected by default:
+
+- **2 gears:** main / equivalent teeth divided by engine pinion. The screenshot example is 82.5 / 10 = 8.25:1; 15,000 RPM at 50% gives 909 head RPM.
+- **3 gears:** an idler between input and output; idler tooth count cancels from the ratio. This is a simple idler train, not a compound transmission.
+- **4 gears:** (main / main pinion) multiplied by (secondary gear / engine pinion). The screenshot values give (58 / 17) × (61 / 20) = 10.41:1. The main pinion and secondary gear share a shaft.
+
+The starting Nitro and manually selected four-gear values are examples, not verified model gearing. Selecting a verified or saved Electric model restores its equivalent two-gear calculation, preventing a two-stage reduction from being counted twice. E and N switch the complete calculator controls and speed formula, retaining each mode’s gear layout and settings. Electric settings and each mode’s throttle are retained when switching. Nitro Reset restores its 50% throttle estimate while preserving engine RPM and gearing. Unsaved Nitro settings are kept for the open session. Both modes use the same **Saved Models** checkbox and **My offline custom models** dropdown above the gear illustration. Shared offline models saved in Manage Models can be selected in either mode; Nitro loads their main/equivalent and pinion values as a two-gear reduction. Previously saved Nitro layouts remain available in the same dropdown while in Nitro mode. The separate Nitro custom-model panel has been removed. Each mode remembers its checkbox and selection while switching. Clearing the checkbox in Nitro restores the gearing that was active before custom selection. Tutorial explains the selected power type.
+
+Preview links can use `?power=nitro`, `?power=nitro&gears=3`, or `?power=nitro&gears=4`.
 
 ## Battery range and estimation guidance
 
